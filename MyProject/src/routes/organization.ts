@@ -19,6 +19,10 @@ orgRoutes.post(
 );
 orgRoutes.get("/organisations", authenticateJWT, getOrganisations);
 orgRoutes.get("/organisations/:orgId", authenticateJWT, getOrganisation);
-orgRoutes.post("/:orgId/users", authenticateJWT, addUserToOrganisation);
+orgRoutes.post(
+  "organisations/:orgId/users",
+  authenticateJWT,
+  addUserToOrganisation
+);
 
 export default orgRoutes;
