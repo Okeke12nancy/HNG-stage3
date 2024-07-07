@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "./tsconfig.json",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/auth/(register|login)",
+      "dest": "dist/index.js"
+    },
+    {
+      "src": "/api/organisations(?:/(\\w+))?",
+      "dest": "dist/index.js"
+    },
+    {
+      "src": "/api/users/(\\d+)",
+      "dest": "dist/index.js"
+    }
+  ]
+}
