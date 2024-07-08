@@ -20,7 +20,7 @@ orgRoutes.post(
 orgRoutes.get("/organisations", authenticateJWT, getOrganisations);
 orgRoutes.get("/organisations/:orgId", authenticateJWT, getOrganisation);
 orgRoutes.post(
-  "organisations/:orgId/users",
+  "/organisations/:orgId/users",
   authenticateJWT,
   addUserToOrganisation
 );
