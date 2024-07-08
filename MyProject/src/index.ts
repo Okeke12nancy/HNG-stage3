@@ -18,6 +18,10 @@ AppDataSource.initialize()
     app.use("/api", userRoutes);
     app.use("/api", orgRoutes);
 
+    app.get("/ping", (req, res) => {
+      res.sendStatus(200);
+    });
+
     const PORT = process.env.PORT || 3000;
     app.listen(PORT, () => {
       console.log(`Server running on port ${PORT}`);
